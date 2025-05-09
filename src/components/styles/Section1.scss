@@ -1,0 +1,40 @@
+.sc1 {
+    .inner {
+        justify-content: space-evenly;
+        align-items: center;
+        .img-wrap {
+            width: 45.9rem;
+        }
+        .t-wrap {
+            width: 60rem;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width:1111px) {
+        .inner {
+            flex-direction: column;
+            gap: 6.5rem;
+            padding: 0 2rem;
+
+            
+        }
+        
+    }
+    @media screen and (max-width:699px) {
+        .inner {
+
+            
+            .con_tit {
+                font-size: 6rem;
+                margin: 0;
+                
+            } 
+            .txt {
+                font-size: 1.5rem;
+            }
+            
+        }
+        
+    }
+}

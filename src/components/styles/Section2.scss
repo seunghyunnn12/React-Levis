@@ -1,0 +1,111 @@
+.sc2 {
+    .inner {
+        text-align: center;
+        flex-direction: column;
+
+        .info-wrap {
+            width: 36rem;
+            margin: 2.5rem auto 3rem;
+            text-align: left;
+        }
+
+        .con_tit {
+            color: #000000;
+        }
+        .s2_slider {
+            width: 100%;
+            padding: 4rem 0;
+            width: 100%;
+
+            .s2-btn {
+                font-size: 2;
+
+            }
+            .name {
+                font-size: 2rem;
+                line-height: 1;
+                letter-spacing: 0;
+                color: #231f20;
+                font-weight: 600;
+                margin: .5rem 0;
+            }
+            .kname {
+                font-size: 1.5rem;
+                color: #231f20;
+                font-weight: 500;
+            }
+            .img-wrap {
+                width: 36rem;
+                background-color: white;
+                margin: 2.5rem auto 3rem;
+                border-radius: 1rem;
+                overflow: hidden;
+                img {
+                    width: 38rem;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+                }
+                
+            }
+
+            .swiper-pagination-progressbar {
+                width: 122rem;
+                margin: 3rem auto 0;
+                position: static;
+                background-color: rgb(228, 228, 228);
+                .swiper-pagination-progressbar-fill {
+                    background-color: #DC272D;
+                }
+            }
+        }
+        .custom-prev,
+        .custom-next {
+            width: 3.5rem;
+            height: 6.7rem;
+            position: absolute;
+            z-index: 3;
+            background-color: saddlebrown;
+            top: calc(50% + 13rem);
+            border: none;
+        }
+        .custom-prev {
+            top: 40rem;
+            left: -2rem;
+            background: url(/levis-img/prev.svg) no-repeat center/contain;
+        }
+        .custom-next {
+            top: 40rem;
+            right: -2rem;
+            background-color: red;
+            background: url(/levis-img/next.svg) no-repeat center/contain;
+        }
+    }
+    @keyframes up {
+        0%{transform: translateY(0);}
+        100%{transform: translateY(-1.2rem);}
+    }
+
+    @media screen and (max-width:1111px) {
+        .inner {
+
+            .sc2-slider-wrap {
+                .in {
+                    height: 56rem;
+                    
+                    .s2_slider .swiper-pagination-progressbar{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .custom-prev,
+            .custom-next {
+                display: none;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+.sc4 {
+    background-color: #eef8ff;
+    .inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .star {
+            background-size: cover;
+            background-position: center;
+        }
+        .con_tit {
+            color: red;
+            margin-top: 0;
+        }
+    }
+}

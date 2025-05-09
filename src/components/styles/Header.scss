@@ -1,0 +1,115 @@
+header {
+    position: fixed;
+    top: 4rem;
+    height: 10.5rem;
+    width: 100%;
+    // background-color: sandybrown;
+    transition: all .3s;
+    z-index: 3;
+
+    &.scroll {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgb(104, 104, 104));
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+        padding: 0 14rem;
+
+        .mob_btn {
+            display: none;
+        }
+
+        .logo-wrap {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        nav ul,
+        .h_right {
+            display: flex;
+        }
+
+        nav ul {
+            li {
+                a {
+                    display: block;
+                    margin-right: 4rem;
+                    font-size: 1.8rem;
+                    color: white;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:after {
+                        display: block;
+                        content: "";
+                        width: 0%;
+                        height: .1rem;
+                        background-color: red;
+                        position: absolute;
+                        bottom: -.5rem;
+                        transition: width .3s ease;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .h_right {
+            li {
+                margin-left: 2rem;
+                position: relative;
+
+                &.cart {
+                    &.after {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: 1.5rem;
+                        content: "";
+                        position: absolute;
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        border-radius: 50%;
+                        background-color: #dc272d;
+                        right: -2rem;
+                        top: -1rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width:1111px) {
+        height: 6.3rem;
+
+        .inner {
+            padding: 0 2rem;
+
+            .mob_btn {
+                display: block;
+                cursor: pointer;
+                color: white;
+            }
+
+            h1.logo {
+                width: 12.4rem;
+                margin-top: 3rem;
+            }
+
+            .h_right li:not(.cart),
+            nav {
+                display: none;
+            }
+        }
+    }
+}

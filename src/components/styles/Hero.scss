@@ -1,0 +1,214 @@
+.hero {
+    padding: 0;
+
+    .inner {
+        align-items: center;
+
+        .t-wrap {
+            width: 63.3rem;
+            margin-right: 14rem;
+        }
+
+        .con_btn {
+            color: white;
+        }
+
+    }
+
+    .swiper-slide {
+        height: 90rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+
+        &.hero_sl_1 {
+            background-image: url('/levis-img/levis-slider1-2.png');
+
+            .t-wrap {
+                color: white;
+
+                .txt {
+                    color: white;
+                }
+            }
+        }
+
+        &.hero_sl_2 {
+            background-image: url('/levis-img/levis-slider2-2.png');
+
+            .t-wrap {
+                color: white;
+
+                .txt {
+                    color: white;
+                }
+            }
+        }
+
+        &.hero_sl_3 {
+            background-image: url('/img/levis-slider3.png');
+
+            .t-wrap {
+                color: white;
+
+                .txt {
+                    color: white;
+                }
+            }
+        }
+
+        &.hero_sl_4 {
+            background-image: url('/img/slider4.png');
+        }
+
+        .t-wrap {
+            color: #009bde;
+
+            .txt {
+                color: #009bde;
+            }
+        }
+    }
+
+    .hero_nav {
+        position: absolute;
+        z-index: 3;
+        bottom: 8.7rem;
+        left: calc(50% - 72rem);
+        display: flex;
+        gap: 2rem;
+
+        .arr_prev,
+        .arr_next {
+            width: 5rem;
+            height: 1.7rem;
+            background-color: #dc272d;
+        }
+
+        .arr_prev {
+            background: url('/img/icon_main_ban_arrow_prev.svg')
+        }
+
+        .arr_next {
+            background: url('/img/icon_main_ban_arrow_next.svg')
+        }
+
+        .swiper-pagination {
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            color: white;
+            font-size: 0;
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 50px;
+                background-color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .swiper-pagination-current {
+                position: absolute;
+                font-size: 2.2rem;
+                top: 0;
+                left: 0;
+            }
+
+            .swiper-pagination-total {
+                position: absolute;
+                font-size: 2.2rem;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+
+
+    @media screen and (max-width:1111px) {
+
+        .swiper-slide {
+            height: 108rem;
+            background-position: center top;
+
+            &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 15rem;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff);
+                z-index: 4;
+            }
+
+            .t-wrap {
+                position: absolute;
+                left: 7.2vw;
+                bottom: 14.5rem;
+
+            }
+
+            &.hero_sl_2 .inner {
+                text-align: left;
+            }
+
+            &.hero_sl_1 {
+                background-image: url('/img/levis-slider1.png');
+            }
+
+            &.hero_sl_2 {
+                background-image: url('/img/levis-slider2.png');
+            }
+
+            &.hero_sl_3 {
+                background-image: url('/img/levis-slider3.png');
+            }
+        }
+
+        .hero_nav {
+            left: 7.2vw;
+            bottom: 3.9rem;
+
+            .arr_prev {
+                background-image: url('/img/r_arrow_prev.svg');
+            }
+
+            .arr_next {
+                background-image: url('/img/r_arrow_next.svg');
+            }
+
+            .swiper-pagination {
+                color: #dc272d;
+            }
+
+            .swiper-pagination:after {
+                background-color: #dc272d;
+            }
+        }
+
+    }
+
+    @media screen and (max-width:699px) {
+
+        .inner {
+
+            .con_tit {
+                margin: 0;
+            }
+
+            .large {
+                font-size: 6rem;
+                line-height: 7rem;
+            }
+        }
+
+    }
+}
