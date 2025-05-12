@@ -23,19 +23,26 @@ const Section2 = () => {
     const prevRef = useRef(null)
     const nextRef = useRef(null)
     const swiperRef = useRef(null)
+    const paginationRef = useRef(null)
 
 
     useEffect(() => {
         if (swiperRef.current &&
             swiperRef.current.params &&
             prevRef.current &&
-            nextRef.current
+            nextRef.current &&
+            paginationRef
         ) {
             swiperRef.current.params.navigation.prevEl = prevRef.current
             swiperRef.current.params.navigation.nextEl = nextRef.current
             swiperRef.current.navigation.destroy()
             swiperRef.current.navigation.init()
             swiperRef.current.navigation.update()
+
+            swiperRef.current.params.pagination.el = paginationRef.current
+            swiperRef.current.pagination.destroy()
+            swiperRef.current.pagination.init()
+            swiperRef.current.pagination.update()
         }
 
     }, [])
@@ -62,7 +69,8 @@ const Section2 = () => {
                     className='s2_slider'
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     pagination={{
-                        type: 'progressbar'
+                        type: 'progressbar',
+                        el:'.pagination',
                     }}
                     loop={true}
                 >
@@ -84,6 +92,7 @@ const Section2 = () => {
                 </Swiper>
                 <button className='custom-prev' ref={prevRef} type='button' />
                 <button className='custom-next' ref={nextRef} type='button' />
+            <div className="pagination" ref={paginationRef}></div>
             </div>
         </section>
     )

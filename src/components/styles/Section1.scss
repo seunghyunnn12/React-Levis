@@ -37,4 +37,22 @@
         }
         
     }
+
+    @media screen and (max-width:400px) {
+        .inner {
+            .img-wrap {
+                width: 35rem;
+            }
+
+            .t-wrap {
+
+                width: 32rem;
+
+                .con_tit {
+                    font-size: 5rem;
+                }
+            }
+
+        }
+    }
 }

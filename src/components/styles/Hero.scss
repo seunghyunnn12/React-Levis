@@ -198,6 +198,12 @@
 
     @media screen and (max-width:699px) {
 
+        .swiper-slide {
+            &.hero_sl_3 {
+                background-position: 60%;
+            }
+        }
+
         .inner {
 
             .con_tit {
@@ -208,6 +214,21 @@
                 font-size: 6rem;
                 line-height: 7rem;
             }
+
+            &.hero_sl_3 {
+                background-position: right;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+
+            .inner {
+                .large {
+                    font-size: 5rem;
+                    width: 35rem;
+                }
+            }
+
         }
 
     }

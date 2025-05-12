@@ -82,6 +82,20 @@
             background-color: red;
             background: url(/levis-img/next.svg) no-repeat center/contain;
         }
+
+                .pagination {
+            position: relative;
+            width: 90%;
+            height: 4px;
+            background: #ffffff;
+            margin:0 auto 1.5rem;
+            
+
+            .swiper-pagination-progressbar-fill {
+                background-color: #DC272D;
+                height: 100%;
+            }
+        }
     }
     @keyframes up {
         0%{transform: translateY(0);}
@@ -93,11 +107,9 @@
 
             .sc2-slider-wrap {
                 .in {
+                    width: 120rem;
                     height: 56rem;
-                    
-                    .s2_slider .swiper-pagination-progressbar{
-                        width: 100%;
-                    }
+                
                 }
             }
 
@@ -107,5 +119,13 @@
             }
         }
 
+    }
+
+    @media screen and (max-width:500px)  {
+            .inner {
+                .con_tit {
+                    font-size: 4.6rem;
+                }
+            }
     }
 }
